@@ -1,0 +1,8 @@
+# Files in the repo that should NOT be published to the live website.
+# (Cloudflare serves the repo root, so we exclude the internal/config files.)
+.git
+.git/**
+.gitignore
+.assetsignore
+wrangler.toml
+README.md
