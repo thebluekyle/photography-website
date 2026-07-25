@@ -1,0 +1,7 @@
+# Tells Cloudflare to serve this folder as a static site (no build step).
+# "directory = ." means "publish every file in the repo root as-is".
+name = "photography-website"
+compatibility_date = "2025-06-01"
+
+[assets]
+directory = "."
