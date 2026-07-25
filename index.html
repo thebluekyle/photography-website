@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Kyle Cudal — photographer & filmmaker. Selected work, and a personal index of film, writing and reading." />
+  <meta name="theme-color" content="#0B0B0C" />
+  <title>Kyle Cudal</title>
+
+  <meta property="og:title" content="Kyle Cudal" />
+  <meta property="og:description" content="Photographer & filmmaker — selected work and personal index." />
+  <meta property="og:type" content="website" />
+  <!-- After you deploy, change these two to the FULL url, e.g.
+       https://kylecudal.com/og-image.jpg — some platforms need an absolute link. -->
+  <meta property="og:image" content="og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="og-image.jpg" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet" />
+
+  <!-- ?v= is a cache-buster: bump the number after editing styles.css / script.js
+       so browsers fetch the new file instead of an old cached copy. -->
+  <link rel="stylesheet" href="styles.css?v=41" />
+</head>
+<body>
+  <a class="skip-link" href="#work">Skip to work</a>
+
+  <!-- ============ HERO (screen 1) ============ -->
+  <section class="hero" id="top">
+    <div class="hero__media">
+      <video class="hero__video" id="heroVideo" muted loop playsinline preload="metadata"></video>
+      <div class="hero__fallback" aria-hidden="true">
+        <div class="hero__blob hero__blob--a"></div>
+        <div class="hero__blob hero__blob--b"></div>
+      </div>
+      <div class="hero__grain" aria-hidden="true"></div>
+      <div class="hero__scrim" aria-hidden="true"></div>
+    </div>
+
+    <!-- Vertically-centred minimal nav, à la the reference -->
+    <nav class="hero-nav" aria-label="Primary">
+      <a class="hero-nav__brand" href="#top" data-bind="name">Kyle Cudal</a>
+      <a class="hero-nav__link" href="#info">Info</a>
+      <a class="hero-nav__link" href="#work" data-view-link="selected">Selected</a>
+      <a class="hero-nav__link" href="#work" data-view-link="projects">Projects</a>
+      <a class="hero-nav__link" href="#work" data-view-link="index">Index</a>
+      <button type="button" class="hero-nav__sound" id="soundToggle" aria-pressed="false">Sound On</button>
+    </nav>
+
+    <a class="hero__cue" href="#work" aria-label="Scroll to work">
+      <span>Scroll</span>
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14m0 0l6-6m-6 6l-6-6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </section>
+
+  <!-- ============ PORTFOLIO (screen 2) ============ -->
+  <section class="folio" id="work">
+    <!-- Top bar -->
+    <header class="folio__bar">
+      <a class="folio__brand" href="#top" data-bind="name">Kyle Cudal</a>
+      <div class="folio__views" role="tablist" aria-label="View">
+        <button type="button" class="folio__view is-active" data-view="selected" role="tab" aria-selected="true">Selected</button><span class="folio__sep">,</span>
+        <button type="button" class="folio__view" data-view="projects" role="tab" aria-selected="false">Projects</button><span class="folio__sep">,</span>
+        <button type="button" class="folio__view" data-view="index" role="tab" aria-selected="false">Index</button>
+      </div>
+    </header>
+
+    <!-- SELECTED — two labelled sections, each a horizontal filmstrip -->
+    <div id="selectedView">
+
+      <section class="folio-section">
+        <div class="folio-section__head">
+          <h2 class="folio-section__title">Photography</h2>
+          <div class="folio-section__actions">
+            <button type="button" class="folio-section__all" data-all="photo">See all photos →</button>
+            <span class="folio-section__count" data-count="photo">—</span>
+          </div>
+        </div>
+        <div class="strip-wrap">
+          <div class="strip" data-strip="photo" tabindex="0" aria-label="Photography, scroll horizontally"><!-- cards injected --></div>
+          <div class="strip__controls">
+            <p class="strip__hint">Click a photo to enlarge</p>
+            <button type="button" class="strip__arrow" data-arrow="photo" data-dir="prev" aria-label="Previous photo">←</button>
+            <button type="button" class="strip__arrow" data-arrow="photo" data-dir="next" aria-label="Next photo">→</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="folio-section">
+        <div class="folio-section__head">
+          <h2 class="folio-section__title">Videography</h2>
+          <div class="folio-section__actions">
+            <button type="button" class="folio-section__all" data-all="film">See all films →</button>
+            <span class="folio-section__count" data-count="film">—</span>
+          </div>
+        </div>
+        <div class="strip-wrap">
+          <div class="strip" data-strip="film" tabindex="0" aria-label="Videography, scroll horizontally"><!-- cards injected --></div>
+          <div class="strip__controls">
+            <p class="strip__hint">Click a film to play</p>
+            <button type="button" class="strip__arrow" data-arrow="film" data-dir="prev" aria-label="Previous film">←</button>
+            <button type="button" class="strip__arrow" data-arrow="film" data-dir="next" aria-label="Next film">→</button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- PROJECTS — cover cards; click one to open its case study -->
+    <div id="projectsView" hidden>
+      <section class="folio-section">
+        <div class="folio-section__head">
+          <h2 class="folio-section__title">Projects</h2>
+          <span class="folio-section__count" id="projectsCount">—</span>
+        </div>
+        <div class="projects" id="projectsGrid"><!-- project cards injected --></div>
+      </section>
+    </div>
+
+    <!-- INDEX — centred scrolling catalogue (the focused title drives a corner preview) -->
+    <div class="index" id="indexView" hidden>
+      <div class="index__meta index__meta--left" id="idxLeft" aria-hidden="true"></div>
+      <div class="index__meta index__meta--right" id="idxRight" aria-hidden="true"></div>
+      <ol class="index__list" id="indexList"><!-- rows injected --></ol>
+      <div class="index__preview" id="idxPreview" aria-hidden="true"></div>
+    </div>
+
+    <!-- Info / personal footer -->
+    <footer class="info" id="info">
+      <img class="info__portrait" id="infoPortrait" alt="Kyle Cudal" hidden />
+      <div class="info__details">
+        <div class="info__bio">
+          <p data-bind="bioLead">Kyle Cudal is a photographer &amp; filmmaker.</p>
+          <p data-bind="bioBody"></p>
+        </div>
+        <a class="info__email" id="emailLink" href="#" data-bind="email">your@email.com</a>
+        <div class="info__links" id="infoLinks"><!-- links injected --></div>
+      </div>
+    </footer>
+  </section>
+
+  <!-- ============ PROJECT CASE STUDY (overlay, deep-linkable via #/project/id) ============ -->
+  <div class="project" id="projectView" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Project">
+    <header class="project__bar">
+      <a class="project__brand" href="#top" data-bind="name">Kyle Cudal</a>
+      <button type="button" class="project__close" id="projectClose">Close ✕</button>
+    </header>
+    <div class="project__scroll">
+      <div class="project__intro">
+        <h1 class="project__title" id="projectTitle"></h1>
+        <dl class="project__meta" id="projectMeta"><!-- meta injected --></dl>
+        <p class="project__blurb" id="projectBlurb"></p>
+      </div>
+      <div class="project__gallery" id="projectGallery"><!-- media tiles injected --></div>
+    </div>
+  </div>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Work viewer">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" aria-label="Previous">‹</button>
+    <div class="lightbox__stage" id="lightboxStage"></div>
+    <button class="lightbox__nav lightbox__nav--next" id="lbNext" aria-label="Next">›</button>
+    <div class="lightbox__caption" id="lightboxCaption"></div>
+  </div>
+
+  <script src="script.js?v=41"></script>
+</body>
+</html>

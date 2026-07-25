@@ -1,0 +1,25 @@
+# ─────────────────────────────────────────────────────────────
+# Kyle Cudal — portfolio .gitignore
+# Keeps the repo lean: only the files the live site actually needs
+# get pushed. Your full-size camera originals stay on your Mac.
+# ─────────────────────────────────────────────────────────────
+
+# Original camera files (NOT used by the site — the site loads the
+# compressed copies in Media/web/ instead). ~366 MB, keep local only.
+Media/Photos/
+Media/Video/
+Media/Me/
+
+# macOS junk
+.DS_Store
+**/.DS_Store
+
+# Editor / OS / tooling clutter
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+.claude/
+
+# Node stuff (not used here, but harmless to ignore)
+node_modules/
