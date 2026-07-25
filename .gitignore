@@ -23,3 +23,6 @@ Thumbs.db
 
 # Node stuff (not used here, but harmless to ignore)
 node_modules/
+
+# Favicon source image (the generated favicon-*.png live in the repo root)
+Media/Favicon/
