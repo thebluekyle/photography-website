@@ -11,8 +11,8 @@ const SITE = {
   portrait: "Media/web/kyle-portrait.jpg",
 
   // Personal footer bio (edit freely)
-  bioLead: "Hello, I'm Kyle Cudal, a 22-year-old photographer. I bought my first camera in 2023 and have taken it everywhere since, shooting mostly landscape and street, and lately getting into videography too.",
-  bioBody: "This is all personal work. I haven't shot a professional gig yet, which is exactly why I built this. I'm looking to grow into fashion, sport and portrait work, across both photography and film. As I'm just starting out, I'd love to collaborate on almost any project, so if you're open to working with someone new, get in touch and let's make something.",
+  bioLead: "Hello, I'm Kyle Cudal, a 22-year-old filmmaker and photographer. I bought my first camera in 2023, and it's been with me ever since. Since then, I've dedicated my time to developing my craft through self-directed projects, constantly experimenting, learning, and refining my visual style.",
+  bioBody: "It's all personal work so far, which is exactly why I built this. What I really want to make is commercials, spec brand films for sport, fashion and any business, no matter how big or small. I'm just starting out and eager to hone my skills, so I'd happily take on almost any project. If this is what you're looking for, please contact me :))",
 
   // Your links (shown in the Info footer as icons only).
   // name = tooltip / screen-reader label, icon = which logo, url = where it goes.
