@@ -316,6 +316,37 @@ function initStripScroll(strip) {
   strip.addEventListener("pointerup", up);
   strip.addEventListener("pointercancel", up);
   strip.addEventListener("scroll", () => hideHint(strip), { passive: true });
+
+  // ── Touch/phone only: auto-colourise the card nearest the carousel's centre
+  // as you scroll sideways, so you don't have to press-and-hold. On desktop
+  // (a real mouse) this block is skipped and hover keeps working as before.
+  if (window.matchMedia("(hover: none) and (pointer: coarse)").matches) {
+    const syncActive = (doFlood) => {
+      const cards = $$(".card", strip);
+      if (!cards.length) return;
+      const box = strip.getBoundingClientRect();
+      const centerX = box.left + box.width / 2;
+      let best = null, bestD = Infinity;
+      cards.forEach((c) => {
+        const r = c.getBoundingClientRect();
+        const d = Math.abs(r.left + r.width / 2 - centerX);
+        if (d < bestD) { bestD = d; best = c; }
+      });
+      cards.forEach((c) => c.classList.toggle("is-active", c === best));   // colourise
+      if (best && doFlood) {
+        floodOn(WORK[Number(best.dataset.index)].color);                   // flood the bg
+        const v = $(".card__vid", best); if (v) v.play().catch(() => {});
+        $$(".card__vid", strip).forEach((vid) => { if (vid !== v) vid.pause(); });
+      }
+    };
+    let ticking = false;
+    strip.addEventListener("scroll", () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => { ticking = false; syncActive(true); });   // flood while swiping
+    }, { passive: true });
+    requestAnimationFrame(() => syncActive(false));   // colourise the first one on load (no flood yet)
+  }
 }
 function hideHint(strip) {
   const wrap = strip.closest(".strip-wrap");

@@ -209,6 +209,10 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
   transition: filter .5s var(--ease);
 }
 .card:hover .card__img, .card:hover .card__vid { filter: grayscale(0) contrast(1); }
+/* Touch devices: the card scrolled to the centre of the carousel auto-colourises
+   (JS adds .is-active only on phones — desktop still uses hover above). */
+.card.is-active .card__img, .card.is-active .card__vid { filter: grayscale(0) contrast(1); }
+.card.is-active .card__placeholder { filter: grayscale(0); }
 
 .card__placeholder {
   position: absolute; inset: 0; display: grid; place-items: center;
