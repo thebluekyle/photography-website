@@ -437,6 +437,10 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
 .info__portrait:hover { filter: grayscale(0); }
 
 /* Contact details centred within the bio column */
+.info__location {
+  align-self: center; text-align: center; margin: 0;
+  font-size: clamp(12px, 1vw, 14px); color: var(--ink-soft); letter-spacing: 0.02em;
+}
 .info__email {
   align-self: center; text-align: center;
   font-size: clamp(12px, 1vw, 15px);

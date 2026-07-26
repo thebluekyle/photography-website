@@ -6,6 +6,7 @@
 const SITE = {
   name:  "Kyle Cudal",
   email: "thebluekyle@gmail.com",
+  location: "Based in Birmingham (willing to travel)",
 
   // Portrait of you, shown in the Info footer. Leave "" to hide it.
   portrait: "Media/web/kyle-portrait.jpg",
