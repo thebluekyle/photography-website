@@ -51,6 +51,9 @@ const WORK = [
   // Local video: plays on hover, and full-screen when clicked.
   { title: "like him", client: "Personal", genre: "Film", type: "film", ratio: "landscape", color: "#7FB0A8", img: "Media/web/final-poster.jpg", video: "Media/web/final.mp4" },
 
+  // Engagement Party film (its photos live further down, grouped with the project).
+  { title: "Engagement Party", client: "Private", genre: "Event · Film", type: "film", ratio: "wide", color: "#3E8E82", img: "Media/web/ep-video-poster.jpg", video: "Media/web/ep-video.mp4", project: "engagement-party" },
+
   // A YouTube film. Set `youtube` to the video ID (the bit after ?v= or youtu.be/).
   // It shows the YouTube thumbnail and plays embedded when clicked.
   { title: "japan and seoul", client: "Personal", genre: "Travel · Film", type: "film", ratio: "wide", color: "#E9A0B4", youtube: "evEwoHI9elA", img: "", video: "", project: "seoul-japan-korea" },
@@ -89,6 +92,13 @@ const WORK = [
   { title: "Canopy",      client: "Personal", genre: "Landscape",    type: "photo", ratio: "portrait",  color: "#9AA7B0", img: "Media/web/all-DSC01045.jpg", video: "", featured: true },
   { title: "Distortion",  client: "Personal", genre: "Music",       type: "photo", ratio: "portrait",  color: "#9B6FC0", img: "Media/web/all-DSCF3225.jpg", video: "" },
   { title: "Waterlilies", client: "Personal", genre: "Documentary",  type: "photo", ratio: "landscape", color: "#B8A96A", img: "Media/web/all-Untitled-4.jpg", video: "" },
+
+  // Engagement Party — event photos (the film sits up top, second in the strip)
+  { title: "The Setting",  client: "Private", genre: "Details",      type: "photo", ratio: "landscape", color: "#9DB588", img: "Media/web/ep-DSCF5675.jpg", video: "", project: "engagement-party", featured: true },
+  { title: "Blooms",       client: "Private", genre: "Details",      type: "photo", ratio: "portrait",  color: "#E39AB4", img: "Media/web/ep-DSCF5699.jpg", video: "", project: "engagement-party" },
+  { title: "Little Guest", client: "Private", genre: "Documentary",  type: "photo", ratio: "landscape", color: "#E8B4AC", img: "Media/web/ep-DSCF5819.jpg", video: "", project: "engagement-party", featured: true },
+  { title: "The Gift",     client: "Private", genre: "Portrait",     type: "photo", ratio: "portrait",  color: "#3E9488", img: "Media/web/ep-DSCF5979.jpg", video: "", project: "engagement-party" },
+  { title: "The Bangle",   client: "Private", genre: "Documentary",  type: "photo", ratio: "portrait",  color: "#D9B27A", img: "Media/web/ep-DSCF6009.jpg", video: "", project: "engagement-party", featured: true },
 ];
 
 /* ============================================================
@@ -115,6 +125,17 @@ const PROJECTS = [
     cover: "Media/web/sjk-DSCF0139.jpg",
     coverRatio: "landscape",
     blurb: "Two weeks across Seoul, Tokyo and Kyoto. Photos on the X100V and filmed on the a6700. I hope to capture the awe and wonder I experienced through my lens.",
+  },
+  {
+    id: "engagement-party",
+    title: "Engagement Party",
+    client: "Private",
+    role: "Photography & Film",
+    date: "2026",
+    location: "Birmingham",
+    cover: "Media/web/ep-DSCF6009.jpg",
+    coverRatio: "portrait",
+    blurb: "My first ever paid gig, and I was so happy to be trusted with it. I spent the day trying to catch the candid, meaningful moments as they happened, the small glances and quiet in-betweens that make a day like this feel real. Thank you for having me.",
   },
 ];
 
