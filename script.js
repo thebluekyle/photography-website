@@ -52,7 +52,7 @@ const WORK = [
   { title: "like him", client: "Personal", genre: "Film", type: "film", ratio: "landscape", color: "#7FB0A8", img: "Media/web/final-poster.jpg", video: "Media/web/final.mp4" },
 
   // Engagement Party film (its photos live further down, grouped with the project).
-  { title: "Engagement Party", client: "Private", genre: "Event · Film", type: "film", ratio: "wide", color: "#3E8E82", img: "Media/web/ep-video-poster.jpg", video: "Media/web/ep-video.mp4", project: "engagement-party" },
+  { title: "Engagement Party", client: "Private", genre: "Event · Film", type: "film", ratio: "wide", color: "#3E8E82", img: "Media/web/ep-video-poster.jpg", video: "Media/web/ep-video.mp4?v=2", project: "engagement-party" },
 
   // A YouTube film. Set `youtube` to the video ID (the bit after ?v= or youtu.be/).
   // It shows the YouTube thumbnail and plays embedded when clicked.
