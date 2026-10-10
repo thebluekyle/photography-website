@@ -54,6 +54,9 @@ const WORK = [
   // Engagement Party film (its photos live further down, grouped with the project).
   { title: "Engagement Party", client: "Private", genre: "Event · Film", type: "film", ratio: "wide", color: "#3E8E82", img: "Media/web/ep-video-poster.jpg", video: "Media/web/ep-video.mp4?v=3", project: "engagement-party" },
 
+  // Locked In Fight Wear film (vertical; its photos are grouped further down).
+  { title: "Locked In", client: "Locked In Fight Wear", genre: "Brand · Film", type: "film", ratio: "tall", color: "#B5533A", img: "Media/web/lif-video-poster.jpg", video: "Media/web/lif-video.mp4", project: "locked-in-fightwear" },
+
   // A YouTube film. Set `youtube` to the video ID (the bit after ?v= or youtu.be/).
   // It shows the YouTube thumbnail and plays embedded when clicked.
   { title: "japan and seoul", client: "Personal", genre: "Travel · Film", type: "film", ratio: "wide", color: "#E9A0B4", youtube: "evEwoHI9elA", img: "", video: "", project: "seoul-japan-korea" },
@@ -99,6 +102,12 @@ const WORK = [
   { title: "Little Guest", client: "Private", genre: "Documentary",  type: "photo", ratio: "landscape", color: "#E8B4AC", img: "Media/web/ep-DSCF5819.jpg", video: "", project: "engagement-party", featured: true },
   { title: "The Gift",     client: "Private", genre: "Portrait",     type: "photo", ratio: "portrait",  color: "#3E9488", img: "Media/web/ep-DSCF5979.jpg", video: "", project: "engagement-party" },
   { title: "The Bangle",   client: "Private", genre: "Documentary",  type: "photo", ratio: "portrait",  color: "#D9B27A", img: "Media/web/ep-DSCF6009.jpg", video: "", project: "engagement-party", featured: true },
+
+  // Locked In Fight Wear — brand shoot (the film sits up top, third in the strip)
+  { title: "Spotlight",  client: "Locked In Fight Wear", genre: "Sport · Brand", type: "photo", ratio: "portrait", color: "#B5533A", img: "Media/web/lif-DSCF7086.jpg", video: "", project: "locked-in-fightwear", featured: true },
+  { title: "The Mark",   client: "Locked In Fight Wear", genre: "Product",       type: "photo", ratio: "portrait", color: "#C9B07A", img: "Media/web/lif-DSCF7115.jpg", video: "", project: "locked-in-fightwear" },
+  { title: "Lane One",   client: "Locked In Fight Wear", genre: "Product",       type: "photo", ratio: "portrait", color: "#A4553F", img: "Media/web/lif-DSCF7124.jpg", video: "", project: "locked-in-fightwear", featured: true },
+  { title: "Back Print", client: "Locked In Fight Wear", genre: "Product",       type: "photo", ratio: "portrait", color: "#8C4A36", img: "Media/web/lif-DSCF7127.jpg", video: "", project: "locked-in-fightwear" },
 ];
 
 /* ============================================================
@@ -136,6 +145,17 @@ const PROJECTS = [
     cover: "Media/web/ep-DSCF6009.jpg",
     coverRatio: "portrait",
     blurb: "My first ever paid gig, and I was so happy to be trusted with it. I spent the day trying to catch the candid, meaningful moments as they happened, the small glances and quiet in-betweens that make a day like this feel real. Thank you for having me.",
+  },
+  {
+    id: "locked-in-fightwear",
+    title: "Locked In Fight Wear",
+    client: "Locked In Fight Wear",
+    role: "Photography & Film",
+    date: "2026",
+    location: "Redditch",
+    cover: "Media/web/lif-DSCF7086.jpg",
+    coverRatio: "portrait",
+    blurb: "A fun night shoot for Locked In Fight Wear. The fighter is surrounded by darkness, completely zoned in on one goal: becoming a better fighter. I really enjoyed this one because it's where I learnt how to pull off a super zoom shot.",
   },
 ];
 
